@@ -38,6 +38,9 @@ export default async function handler(
           }
         );
 
+        console.log(blogResponse.data);
+        res.status(blogResponse?.status);
+
         if (blogResponse?.status === 200) {
           const data = blogResponse.data;
           const { total, start, items } = data;

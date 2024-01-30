@@ -47,8 +47,6 @@ export async function getServerSideProps(context: NextPageContext) {
 export default function Index({ blogList, paging }: Props) {
   const router = useRouter();
 
-  console.log(`request >>>  ${process.env.NEXT_PUBLIC_DEV_URL}/api/blog`);
-
   const handlePagingOnClick = (e: MouseEvent<HTMLElement>, isNext: boolean) => {
     e.preventDefault();
     const display: number = Number(paging.display);
