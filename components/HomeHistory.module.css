@@ -1,0 +1,22 @@
+.resumeItem::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid var(--bs-primary);
+  box-sizing: border-box;
+}
+
+.resumeItem {
+  padding: 0 0 20px 20px;
+  margin-top: -15px;
+  border-left: 2px solid var(--bs-primary);
+  position: relative;
+}
+.li {
+  list-style: none;
+}

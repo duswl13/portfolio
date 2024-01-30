@@ -1,0 +1,52 @@
+POST http://localhost:3000/api/project
+Content-Type: application/json
+
+{
+  "seq": 12,
+   "badgeList": "",
+   "title": "Blutooth 통신 기반 소변알람/미아방지/위치추적용 캐치벨",
+  "agency": "신텍",
+  "startDate": "2016-10-01",
+  "endDate": "2017-08-31",
+  "about": "bluetooth 2.0 모듈과 통신하는 안드로이드 네이티브 앱을 개발하였습니다.",
+  "imgUrl": "",
+  "webUrl": "",
+  "androidUrl": "",
+  "iosUrl": ""
+}
+
+
+GET http://localhost:3000/api/blog
+
+<!--
+{
+  "seq": 1,
+  "badgeList": "java 1.8, jex framework, tibero, vue 2, Jeus 8",
+  "title": "생활밀착형 모바일 플랫폼 라이프온 개발",
+  "agency": "신협중앙회",
+  "startDate": "2023-06-07",
+  "endDate": "2023-12-29",
+  "about": "신협의 멤버스 커뮤니티를 구축하기 위한 플랫폼입니다. 행복 커뮤니티, 지역 커뮤니티, 기부 서비스를 개발하였습니다.",
+  "imgUrl": "/img/project/project1.png",
+  "webUrl": "",
+  "androidUrl": "https://play.google.com/store/apps/details?id=kr.co.cu.lifeapp&pli=1",
+  "iosUrl": "https://apps.apple.com/kr/app/%EC%8B%A0%ED%98%91-%EB%9D%BC%EC%9D%B4%ED%94%84%EC%98%A8/id6467175887"
+}
+*/
+
+
+##
+
+GET http://localhost:3000/api/project
+
+##
+
+PATCH http://localhost:3000/api/project/65a8ad4324557d10159d7a8e
+Content-Type: application/json
+
+{
+     "imgUrl": ""
+}
+
+##
+DELETE http://localhost:3000/api/project/65a89080068bd6324d5fafd0

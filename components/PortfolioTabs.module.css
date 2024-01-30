@@ -1,0 +1,22 @@
+.navLink,
+:global(.dark) .navLink {
+  color: var(--bs-white-sub-text) !important;
+  border-bottom-color: var(--bs-white-sub-text) !important;
+  border-bottom-width: var(--bs-nav-underline-border-width) !important;
+}
+
+.navLink:hover,
+:global(.dark) .navLink:hover {
+  color: var(---bs-white-head-text) !important;
+  border-bottom-color: var(---bs-white-head-text) !important;
+}
+
+.active,
+:global(.dark) .active {
+  color: var(---bs-white-head-text) !important;
+  border-bottom-color: var(---bs-white-head-text) !important;
+}
+
+.navUnderline {
+  --bs-nav-underline-gap: 0;
+}

@@ -1,0 +1,27 @@
+POST http://localhost:3000/api/skill
+Content-Type: application/json
+
+{
+  "seq": 4,
+  "svgClass" : "bi-server",
+   "title": "server",
+   "list" : "Tomcat, Jeus, Aws ec2, Vercel"
+}
+
+
+
+##
+
+GET http://localhost:3000/api/skill
+
+##
+
+PATCH http://localhost:3000/api/skill/65a8a0dc24557d10159d7a88
+Content-Type: application/json
+
+{
+     "startDate": "2020-01-01"
+}
+
+##
+DELETE http://localhost:3000/api/skill/65a8b2ce70ace497e6b4527e
