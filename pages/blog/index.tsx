@@ -23,7 +23,7 @@ export async function getServerSideProps(context: NextPageContext) {
     const { query } = context;
     const searchPage = query.page || 1;
     const response = await fetch(
-      `http://localhost:3000/api/blog?page=${searchPage}`
+      `${process.env.NEXT_PUBLIC_DEV_URL}/api/blog?page=${searchPage}`
     );
     const { posts, paging } = await response.json();
     return {

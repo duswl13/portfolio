@@ -14,13 +14,13 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const start = req.query.page || 1;
-  const display = Number(process.env.DISPLAY);
+  const display = Number(process.env.NEXT_PUBLIC_DISPLAY);
 
   switch (req.method) {
     case "GET":
       try {
-        const clientId = process.env.CLIENT_ID;
-        const clientSecret = process.env.CLIENT_SECRET;
+        const clientId = process.env.NEXT_PUBLIC_CLIENT_ID;
+        const clientSecret = process.env.NEXT_PUBLIC_CLIENT_SECRET;
 
         const blogResponse = await axios.get(
           "https://openapi.naver.com/v1/search/blog.json",

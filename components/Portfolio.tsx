@@ -24,9 +24,9 @@ export default function portfolio() {
         endDate="2024.01.31"
         about="프론트엔드 분야로 관심이 생겼고, 혼자서 React, Next, Typescript를 공부하였습니다. 공부한 내용을 포트폴리오에 적용하면 좋겠다는 생각이 들어 포트폴리오 개편작업을 하였습니다."
         imgUrl="/img/portfolio/portfolio1.png"
-        webUrl="http://localhost:3000"
+        webUrl={process.env.NEXT_PUBLIC_DEV_URL}
         imgClass="shadow"
-        githubUrl="https://github.com/duswl13/codeitmall"
+        githubUrl="https://github.com/duswl13/portfolio"
       />
       <div className="d-flex align-items-center mt-5 mb-3">
         <div className="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-5 me-3">
@@ -57,8 +57,8 @@ export default function portfolio() {
         </p>
         <SyntaxHighlighter language="jsx" style={dracula}>
           {dedent`
-                      const clientId = process.env.CLIENT_ID;
-                      const clientSecret = process.env.CLIENT_SECRET;
+                      const clientId = process.env.NEXT_PUBLIC_CLIENT_ID;
+                      const clientSecret = process.env.NEXT_PUBLIC_CLIENT_SECRET;
                  
                       const blogResponse = await axios.get(
                         "https://openapi.naver.com/v1/search/blog.json",
