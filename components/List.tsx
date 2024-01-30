@@ -1,6 +1,6 @@
 import Blog from "./Blog";
 import Project from "./Project";
-import listStyles from "./list.module.css";
+import listStyles from "./List.module.css";
 
 interface project {
   seq: number;
