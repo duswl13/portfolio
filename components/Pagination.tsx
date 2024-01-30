@@ -11,39 +11,41 @@ interface Props {
 export default function Pagination({ start, total, display, onClick }: Props) {
   return (
     <animated.div>
-      <nav aria-label="Page navigation example">
-        <ul className="pagination justify-content-center">
-          {start !== 1 && (
-            <li
-              className={`page-item`}
-              onClick={(e) => {
-                onClick(e, false);
-              }}
-            >
-              <a
-                className="page-link"
-                href="#"
-                tabIndex={-1}
-                aria-disabled="true"
+      {start >= 1 && (
+        <nav aria-label="Page navigation ">
+          <ul className="pagination justify-content-center">
+            {start !== 1 && (
+              <li
+                className={`page-item`}
+                onClick={(e) => {
+                  onClick(e, false);
+                }}
               >
-                이전
-              </a>
-            </li>
-          )}
-          {start + display <= total && (
-            <li
-              className={`page-item `}
-              onClick={(e) => {
-                onClick(e, true);
-              }}
-            >
-              <a className="page-link" href="#">
-                다음
-              </a>
-            </li>
-          )}
-        </ul>
-      </nav>
+                <a
+                  className="page-link"
+                  href="#"
+                  tabIndex={-1}
+                  aria-disabled="true"
+                >
+                  이전
+                </a>
+              </li>
+            )}
+            {start + display <= total && (
+              <li
+                className={`page-item `}
+                onClick={(e) => {
+                  onClick(e, true);
+                }}
+              >
+                <a className="page-link" href="#">
+                  다음
+                </a>
+              </li>
+            )}
+          </ul>
+        </nav>
+      )}
     </animated.div>
   );
 }

@@ -77,7 +77,7 @@ export default function Project({
       }`}
     >
       {imgUrl && (
-        <div className="col-12 col-lg-6 align-self-start">
+        <div className="col-12 col-lg-6 align-self-start px-lg-0 px-3">
           <img
             src={imgUrl}
             alt={title}
@@ -98,7 +98,7 @@ export default function Project({
           imgUrl ? "col-lg-6" : "col-lg-12"
         }`}
       >
-        <div className=" px-0">
+        <div className="px-lg-0 px-3">
           <p className="mt-lg-0 mt-4 mb-4 primaryPoint">
             {10 > seq ? `0${seq}` : seq}
           </p>

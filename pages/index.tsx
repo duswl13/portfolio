@@ -6,6 +6,7 @@ import HomeHistory from "@/components/HomeHistory";
 import dbConnect from "@/db/dbConnect";
 import Skill from "@/db/models/Skill";
 import History from "@/db/models/History";
+import React, { useEffect, useState } from "react";
 
 interface historyData {
   months: number;
@@ -42,13 +43,34 @@ export async function getServerSideProps() {
 }
 
 export default function Home({ skillList, historyList }: Props) {
+  const [isMobile, setIsMobile] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    // 클라이언트 측에서만 실행되도록 함
+    const isMobileDevice = /iPhone|iPad|iPod|Android/i.test(
+      navigator.userAgent
+    );
+    setIsMobile(isMobileDevice);
+  }, []);
+
   return (
     <>
       <div>
         <section className="d-flex align-items-center ">
-          <video autoPlay={true} muted loop className={`w-100 ${styles.video}`}>
-            <source src="/video/video.mp4" type="video/mp4" />
-          </video>
+          {isMobile ? (
+            <div className={`w-100 ${styles.video}`}></div>
+          ) : (
+            <video
+              autoPlay={true}
+              preload="auto"
+              muted
+              loop
+              className={`w-100 ${styles.video}`}
+            >
+              <source src="/video/video.mp4" type="video/mp4" />
+            </video>
+          )}
+
           <div
             className=" position-absolute p-5 text-center w-100"
             data-aos="fade-up"
@@ -63,10 +85,15 @@ export default function Home({ skillList, historyList }: Props) {
 
             <h1 className="text-gradient fw-bolder">장연지 포트폴리오</h1>
             <p>
-              항상 재밌는 개발을 하고 싶은 풀스택 웹 개발자입니다.
+              항상 재밌는 개발을 하고 싶은{isMobile ? <br /> : " "}풀스택 웹
+              개발자입니다.
               <br />
-              자전거를 타고 출퇴근 하는 것을 좋아하며, 무엇이든지 끈기있게
-              도전하는 것을 좋아합니다.
+              자전거를 타고 출퇴근 하는 것을 좋아하며,{isMobile ? (
+                <br />
+              ) : (
+                " "
+              )}{" "}
+              무엇이든지 끈기있게 도전하는 것을 좋아합니다.
             </p>
             <div className="d-flex justify-content-center fs-2 gap-4">
               <a
@@ -103,7 +130,7 @@ export default function Home({ skillList, historyList }: Props) {
               <img src="/img/profile.jpg" className={styles.img} />
             </div>
             <div className="col-lg-4 col-12 text-start d-flex align-items-center justify-content-center ">
-              <div className="row ">
+              <div className="row p-lg-0  p-3 ">
                 <div className="col-12 pb-3 pt-lg-0 pt-3">
                   <SvgIcon
                     className="bi-chevron-compact-right"
@@ -141,7 +168,7 @@ export default function Home({ skillList, historyList }: Props) {
                       d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671"
                     />
                   </SvgIcon>
-                  <span className="fw-bold">MBTI:</span> ISTJ
+                  <span className="fw-bold">MBTI:</span> IST J/P
                 </div>
                 <div className="col-12 pb-3">
                   <SvgIcon

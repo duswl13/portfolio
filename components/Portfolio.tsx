@@ -20,12 +20,11 @@ export default function portfolio() {
         badgeList={`react, next, typescript, bootstrap, vercel, mongoDB`}
         title="2024-02-01 기준 포트폴리오"
         agency=""
-        startDate="2024.01.20"
+        startDate="2024.01.22"
         endDate="2024.01.31"
         about="프론트엔드 분야로 관심이 생겼고, 혼자서 React, Next, Typescript를 공부하였습니다. 공부한 내용을 포트폴리오에 적용하면 좋겠다는 생각이 들어 포트폴리오 개편작업을 하였습니다."
         imgUrl="/img/portfolio/portfolio1.png"
         webUrl={process.env.NEXT_PUBLIC_DEV_URL}
-        imgClass="shadow"
         githubUrl="https://github.com/duswl13/portfolio"
       />
       <div className="d-flex align-items-center mt-5 mb-3">
@@ -196,7 +195,7 @@ export default History;
                    h.setFrom(from);
                    h.setTo(from);
                    h.setSubject("[포트폴리오]를 통해 들어온 이메일 문의");
-                   h.setText("회신을 원하는 이메일 주소:" + email + "\n\n" + content);
+                   h.setText("회신을 원하는 이메일 주소:" + email + "," + content);
                    emailSender.send(m);
                    
                    LOGGER.info("sendEmail success -- "+ email + "," + content);

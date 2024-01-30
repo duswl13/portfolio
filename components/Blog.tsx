@@ -56,7 +56,7 @@ export default function Blog({
       style={{ ...animation }}
       className="row pb-5 d-flex"
     >
-      <div className={`col-12 align-self-center col-lg-12`}>
+      <div className="col-12 align-self-center col-lg-12 px-lg-0 px-3">
         <h5>
           <a
             target="_blank"
