@@ -25,11 +25,8 @@ export async function getServerSideProps(context: NextPageContext) {
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_DEV_URL}/api/blog?page=${searchPage}`
     );
-    console.log(
-      `request >>> ${process.env.NEXT_PUBLIC_DEV_URL}/api/blog?page=${searchPage}`
-    );
+
     const { posts, paging } = await response.json();
-    console.log(`posts >>>`, posts);
     return {
       props: {
         blogList: posts,
@@ -49,6 +46,8 @@ export async function getServerSideProps(context: NextPageContext) {
 
 export default function Index({ blogList, paging }: Props) {
   const router = useRouter();
+
+  console.log(`request >>>  ${process.env.NEXT_PUBLIC_DEV_URL}/api/blog`);
 
   const handlePagingOnClick = (e: MouseEvent<HTMLElement>, isNext: boolean) => {
     e.preventDefault();
