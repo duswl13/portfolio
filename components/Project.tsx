@@ -7,7 +7,7 @@ interface Props {
   seq: number;
   badgeList: string;
   title: string;
-  agency: string;
+  agency?: string;
   startDate: string;
   endDate: string;
   about: string;
@@ -23,7 +23,7 @@ export default function Project({
   seq,
   badgeList,
   title,
-  agency,
+  agency = "",
   startDate,
   endDate,
   about,

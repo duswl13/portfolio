@@ -6,7 +6,6 @@ import { CommonContextProvider } from "@/lib/CommonContext";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import tsx from "react-syntax-highlighter/dist/cjs/languages/prism/tsx";
 import TopButton from "@/components/TopButton";
-import LodingButton from "@/components/LodingButton";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@/styles/global.css";
 
@@ -22,7 +21,6 @@ export default function App({ Component, pageProps }: AppProps) {
       <CommonContextProvider>
         <Header />
         <Component {...pageProps} />
-        <LodingButton />
         <TopButton />
         <Footer />
       </CommonContextProvider>

@@ -1,6 +1,8 @@
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import dracula from "react-syntax-highlighter/dist/cjs/styles/prism/dracula";
 import Project from "./Project";
+import SvgIcon from "./SvgIcon";
+
 const dedent = (strs: TemplateStringsArray, ...values: any[]): string => {
   const str = strs
     .reduce((s, part, i) => s + values[i - 1] + part)
@@ -19,7 +21,6 @@ export default function portfolio() {
         seq={1}
         badgeList={`react, next, typescript, bootstrap, vercel, mongoDB`}
         title="2024-02-01 기준 포트폴리오"
-        agency=""
         startDate="2024.01.22"
         endDate="2024.01.31"
         about="프론트엔드 분야로 관심이 생겼고, 혼자서 React, Next, Typescript를 공부하였습니다. 공부한 내용을 포트폴리오에 적용하면 좋겠다는 생각이 들어 포트폴리오 개편작업을 하였습니다."
@@ -29,16 +30,14 @@ export default function portfolio() {
       />
       <div className="d-flex align-items-center mt-5 mb-3">
         <div className="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-5 me-3">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
+          <SvgIcon
+            className="bi-code-slash"
+            width={24}
+            height={24}
             fill="currentColor"
-            className="bi bi-code-slash"
-            viewBox="0 0 16 16"
           >
             <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0m6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0" />
-          </svg>
+          </SvgIcon>
         </div>
         <h5 className="fw-bolder mb-0">
           <span className="text-gradient d-inline text-uppercase">
@@ -147,29 +146,22 @@ export default History;
             seq={2}
             badgeList={`spring boot, thymeleaf, bootstrap, jquery, aws ec2`}
             title="~2024-01-31 기준 포트폴리오"
-            agency=""
             startDate="2022.10.12"
             endDate="2022.10.17"
             about="Bootstrap4 템플릿을 구매하여 만든 포트폴리오입니다. 한 페이지로 구성되어있고 구매한 템플릿이다보니 하고싶은대로 표현이 안되어 답답함을 느꼈었습니다. 개편한 포트폴리오에서는 템플릿 구매 없이 직접 작업하였습니다."
             imgUrl="/img/portfolio/portfolio2.png"
             webUrl="https://jyj-portfolio.com"
-            androidUrl=""
-            iosUrl=""
-            imgClass=""
-            githubUrl="https://github.com/duswl13/portpolio"
           />
           <div className="d-flex align-items-center mb-3">
             <div className="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-5 me-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
+              <SvgIcon
+                className="bi-code-slash"
+                width={24}
+                height={24}
                 fill="currentColor"
-                className="bi bi-code-slash"
-                viewBox="0 0 16 16"
               >
                 <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0m6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0" />
-              </svg>
+              </SvgIcon>
             </div>
             <h5 className="fw-bolder mb-0">
               <span className="text-gradient d-inline text-uppercase">
